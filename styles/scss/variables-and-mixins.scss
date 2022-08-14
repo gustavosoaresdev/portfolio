@@ -1,19 +1,67 @@
 /*========================== COLORS ==========================*/
-
+$c-primary: #4829a6;
+$c-secundary: #6d57b0;
+$c-white: #fafafa;
+$c-weak-white: #cccccc;
+$c-black: #0a0a0a;
+$c-weak-black: #333333;
 
 /*========================== BACKGROUNDS ==========================*/
-
+$bg-primary: #080713;
+$bg-secundary: #0b0a17;
 
 /*========================== FONT FAMILY ==========================*/
-
+$vsc-font-family: Arial, Helvetica, sans-serif;
+$default-font-family: 'Kanit', $vsc-font-family;
+$default-font-family-2: 'Baloo Da 2', $vsc-font-family;
+$logo-font-family: 'Cabin Sketch', $vsc-font-family;
 
 /*========================== FONT SIZE FOR TITLES AND SUBTITLES ==========================*/
-
+$big-font-size-for-title: 3em;
+$h1-font-size-for-title: 2.5em;
+$h2-font-size-for-title: 2em;
+$h3-font-size-for-title: 1.5em;
 
 /*========================== FONT SIZE FOR SMALLER TEXTS ==========================*/
-
+$big-font-size-for-text: 1.25em;
+$medium-font-size-for-text: 1.125em;
+$normal-font-size-for-text: 1em;
 
 /*========================== FONT WEIGHT ==========================*/
-
+$normal-font-weight: 400;
+$smaller-font-weight: 300;
+$medium-font-weight: 600;
+$bold-font-weight: bold;
 
 /*========================== MIXINS ==========================*/
+@mixin responsive($device) {
+    @if $device ==tablet {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $device ==mobile-1 {
+        @media screen and (max-width: 390px) {
+            @content;
+        }
+    }
+
+    @else if $device ==mobile-2 {
+        @media screen and (max-width: 305px) {
+            @content;
+        }
+    }
+
+    @else if $device ==mobile-3 {
+        @media screen and (max-width: 285px) {
+            @content;
+        }
+    }
+
+    @else if $device ==mobile-max-height {
+        @media screen and (max-height: 376px) {
+            @content;
+        }
+    }
+}
