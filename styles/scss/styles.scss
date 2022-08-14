@@ -12,3 +12,34 @@
 @import './contact';
 
 /*========================== RESET ==========================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: $default-font-family;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: $c-white;
+    font-size: $normal-font-size-for-text;
+    -webkit-font-smoothing: antialiased;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background: lighten($bg-primary, 2%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $c-primary;
+        background: -moz-linear-gradient(to bottom, $c-primary, darken($c-primary, 20%));
+        background: -webkit-linear-gradient(to bottom, $c-primary, darken($c-primary, 20%));
+        background: linear-gradient(to bottom, $c-primary, darken($c-primary, 20%));
+        border-radius: 5px;
+    }
+}
