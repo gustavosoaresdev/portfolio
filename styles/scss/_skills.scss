@@ -185,3 +185,29 @@
         }
     }
 }
+
+/*========================== RESPONSIVE SKILLS ==========================*/
+@include responsive(tablet) {
+    .skills .skills-container .skills-content .cards-container {
+        .card {
+            padding-bottom: 24px;
+        }
+
+        .html,
+        .css,
+        .js,
+        .sass,
+        .linux,
+        .git {
+
+            &:hover::before {
+                display: none;
+            }
+
+            &::after {
+                display: block;
+                color: $c-weak-white;
+            }
+        }
+    }
+}
