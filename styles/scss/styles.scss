@@ -375,3 +375,16 @@ body {
         }
     }
 }
+
+/*========================== RESPONSIVE HOME ==========================*/
+@include responsive(tablet) {
+
+    .main .main-container .isometric,
+    .network-navigation {
+        display: none;
+    }
+
+    .main .main-container .sec-content .content h1 {
+        font-size: $h1-font-size-for-title;
+    }
+}
