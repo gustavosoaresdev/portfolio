@@ -1,3 +1,4 @@
+/*========================== ABOUT ==========================*/
 .about {
     width: 100%;
     background: $bg-secundary;
@@ -109,6 +110,52 @@
                 border-radius: 50%;
                 padding: 8px;
             }
+        }
+    }
+}
+
+/*========================== RESPONSIVE ABOUT ==========================*/
+@include responsive(tablet) {
+    .about .about-container {
+        p {
+            display: none;
+        }
+
+        .about-content {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .dl-about {
+                max-width: 100%;
+                text-align: center;
+
+                dd {
+                    margin-left: 0;
+                }
+            }
+
+            .img {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@include responsive(mobile-1) {
+    .about .about-container .about-content {
+        .dl-about {
+            dt {
+                font-size: $medium-font-size-for-text;
+            }
+
+            dd {
+                font-size: $normal-font-size-for-text;
+            }
+        }
+
+        .img img {
+            width: 170px;
+            height: 170px;
         }
     }
 }
