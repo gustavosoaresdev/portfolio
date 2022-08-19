@@ -240,7 +240,7 @@ body {
     }
 }
 
-@include responsive(mobile-3) {
+@include responsive(mobile-max-height) {
     .header {
         height: 60px;
 
