@@ -388,3 +388,36 @@ body {
         font-size: $h1-font-size-for-title;
     }
 }
+
+@include responsive(mobile-1) {
+    .main .main-container .sec-content .content {
+        max-width: 300px;
+
+        h1 {
+            font-size: 1.85em;
+        }
+
+        strong,
+        p,
+        a {
+            font-size: $normal-font-size-for-text;
+        }
+    }
+}
+
+@include responsive(mobile-max-height) {
+    .main {
+        height: 100%;
+        padding: 80px 20px;
+    }
+}
+
+@include responsive(mobile-3) {
+    .main .main-container .sec-content .content {
+        max-width: 220px;
+
+        h1::after {
+            display: none;
+        }
+    }
+}
