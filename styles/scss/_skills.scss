@@ -1,0 +1,187 @@
+/*========================== SKILLS ==========================*/
+.skills {
+    width: 100%;
+    background: $bg-primary;
+    padding: 40px 20px 100px 20px;
+
+    .skills-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            font: {
+                size: $h1-font-size-for-title;
+                weight: $medium-font-weight;
+            }
+
+            color: $c-white;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 48px;
+                height: 3px;
+                background: $c-primary;
+            }
+        }
+
+        p {
+            color: $c-weak-white;
+            text-align: center;
+            margin-bottom: 80px;
+            font-size: $big-font-size-for-text;
+        }
+
+        .skills-content .cards-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            .card {
+                width: 140px;
+                height: 140px;
+                background: lighten($bg-secundary, 2%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                transition: all .5s ease-in-out;
+                position: relative;
+
+                &:hover {
+                    transform: scale(1.1);
+                    border: 1px solid $c-primary;
+                }
+
+                i {
+                    font-size: 70px;
+                    color: $c-primary;
+                }
+            }
+
+            .html,
+            .css,
+            .js,
+            .sass,
+            .linux,
+            .git {
+                &:hover:before {
+                    position: absolute;
+                    color: $c-white;
+                    background: lighten($bg-secundary, 2%);
+                    width: 140px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    border-radius: 2px;
+                }
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    font-weight: $medium-font-weight;
+                    background: $bg-secundary;
+                    width: 100%;
+                    text-align: center;
+                    padding: 2px 0;
+                }
+            }
+
+            .html,
+            .css,
+            .js {
+                &:hover::before {
+                    top: -40px;
+                }
+            }
+
+            .sass,
+            .linux,
+            .git {
+                &:hover::before {
+                    bottom: -40px;
+                }
+            }
+
+            .html {
+                &:hover::before {
+                    content: 'HTML';
+                }
+
+                &::after {
+                    content: 'HTML';
+                }
+            }
+
+            .css {
+                &:hover::before {
+                    content: 'CSS';
+                }
+
+                &::after {
+                    content: 'CSS';
+                }
+            }
+
+            .js {
+                &:hover::before {
+                    content: 'JavaScript';
+                }
+
+                &::after {
+                    content: 'JavaScript';
+                }
+            }
+
+            .sass {
+                &:hover::before {
+                    content: 'Sass';
+                }
+
+                &::after {
+                    content: 'Sass';
+                }
+            }
+
+            .linux {
+                &:hover::before {
+                    content: 'Linux'
+                }
+
+                &::after {
+                    content: 'Linux';
+                }
+            }
+
+            .git {
+                &:hover::before {
+                    content: 'Git';
+                }
+
+                &::after {
+                    content: 'Git';
+                }
+            }
+
+            .html,
+            .css,
+            .js,
+            .sass,
+            .linux,
+            .git {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

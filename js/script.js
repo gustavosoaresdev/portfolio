@@ -1,3 +1,4 @@
+/*========================== MENU MOBILE ==========================*/
 function menuMobile() {
     const btnMenuMobile = document.getElementById('btn-menu-mobile');
     function toggleMenu(event) {
