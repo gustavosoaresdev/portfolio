@@ -1,0 +1,114 @@
+.about {
+    width: 100%;
+    background: $bg-secundary;
+    padding: 40px 20px 100px 20px;
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            color: $c-white;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+
+            font: {
+                size: $h1-font-size-for-title;
+                weight: $medium-font-weight;
+            }
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 48px;
+                height: 3px;
+                background: $c-primary;
+            }
+        }
+
+        p {
+            color: $c-weak-white;
+            text-align: center;
+            font-size: $big-font-size-for-text;
+            margin-bottom: 80px;
+
+            &::before,
+            &::after {
+                content: '*';
+                color: $c-primary;
+            }
+        }
+
+        .about-content {
+            max-width: 740px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+
+            .dl-about {
+                width: 420px;
+
+                .text {
+                    color: $c-weak-white;
+                    margin-bottom: 40px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                dt {
+                    margin-top: -10px;
+                    margin-bottom: 5px;
+
+                    font: {
+                        size: $big-font-size-for-text;
+                        weight: $medium-font-weight;
+                    }
+
+                    i {
+                        font-size: $normal-font-size-for-text;
+                        margin-right: .5em;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+                    }
+
+                    &.active i {
+                        transform: rotateZ(90deg);
+                    }
+                }
+
+                dd {
+                    font-size: $medium-font-size-for-text;
+                    font-weight: $smaller-font-weight;
+                    margin-left: 1.1em;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    a {
+                        font-weight: $medium-font-weight;
+                        color: $c-primary;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .img img {
+                width: 200px;
+                height: 200px;
+                border: 1px solid $c-primary;
+                border-radius: 50%;
+                padding: 8px;
+            }
+        }
+    }
+}
