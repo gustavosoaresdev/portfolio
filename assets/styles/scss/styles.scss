@@ -384,6 +384,8 @@ body {
             background: linear-gradient(to top, #251554, transparent 50%);
             border-bottom-left-radius: 50%;
             border-bottom-right-radius: 50%;
+            opacity: 0;
+            animation: imageOpacity 1.5s .2s forwards;
 
             img {
                 width: 240px;
