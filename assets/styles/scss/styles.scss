@@ -470,3 +470,16 @@ body {
         }
     }
 }
+
+/*========================== RESPONSIVE FOOTER ==========================*/
+@include responsive(tablet) {
+    .footer .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        div {
+            text-align: center;
+        }
+    }
+}
