@@ -36,3 +36,22 @@ function menuMobile() {
 };
 
 menuMobile();
+
+/*========================== ACCORDION ==========================*/
+function accordion() {
+    const accordionList = document.querySelectorAll('.dl-about dt');
+    const activeClass = 'active';
+
+    if (accordionList.length) {
+        function activeAccordion() {
+            this.classList.toggle(activeClass);
+            this.nextElementSibling.classList.toggle(activeClass);
+        }
+
+        accordionList.forEach((dt) => {
+            dt.addEventListener('click', activeAccordion);
+        });
+    }
+}
+
+accordion();

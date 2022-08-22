@@ -87,6 +87,7 @@
                     font-size: $medium-font-size-for-text;
                     font-weight: $smaller-font-weight;
                     margin-left: 1.1em;
+                    display: none;
 
                     &.active {
                         display: block;
