@@ -281,6 +281,14 @@ body {
             .network-navigation ul {
                 list-style: none;
 
+                li:first-child a {
+                    animation: moveBanner-2 1s .2s forwards;
+                }
+
+                li:last-child a {
+                    animation: moveBanner-2 1s .6s forwards;
+                }
+
                 li a {
                     color: $c-white;
                     display: block;
@@ -288,11 +296,12 @@ body {
                     text-align: center;
                     border-radius: 2px;
                     font-size: $medium-font-size-for-text;
-                    opacity: .8;
+                    opacity: 0;
                     transition: all .3s ease-in-out;
+                    animation: moveBanner-2 1s .4s forwards;
 
                     &:hover {
-                        opacity: 1;
+                        opacity: 1 !important;
                         background: $c-primary;
                     }
                 }
@@ -303,6 +312,8 @@ body {
 
                 h1 {
                     color: $c-white;
+                    animation: moveBanner 1s .2s forwards;
+                    opacity: 0;
 
                     font: {
                         size: $big-font-size-for-title;
@@ -319,6 +330,8 @@ body {
                     color: $c-weak-white;
                     display: block;
                     margin-bottom: 15px;
+                    opacity: 0;
+                    animation: moveBanner 1s .4s forwards;
 
                     font: {
                         size: $big-font-size-for-text;
@@ -331,6 +344,8 @@ body {
                     color: $c-weak-white;
                     font-size: $medium-font-size-for-text;
                     font-weight: $smaller-font-weight;
+                    opacity: 0;
+                    animation: moveBanner 1s .6s forwards;
                 }
 
                 a {
@@ -348,6 +363,8 @@ body {
                     background: linear-gradient(to right, $c-primary, darken($c-primary, 20%));
                     margin-top: 40px;
                     transition: all .5s ease-in-out;
+                    opacity: 0;
+                    animation: moveBanner 1s .8s forwards;
 
                     &:hover {
                         max-width: 180px;

@@ -1,4 +1,27 @@
 /*========================== ANIMATIONS ==========================*/
+@keyframes moveBanner {
+    from {
+        opacity: 0;
+        transform: translateY(5rem) rotateY(-30deg);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveBanner-2 {
+    from {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: .8;
+    }
+}
 
 
 /*========================== ANIMATION WHEN SCROLLING ==========================*/
