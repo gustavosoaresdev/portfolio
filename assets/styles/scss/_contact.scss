@@ -127,3 +127,42 @@
         }
     }
 }
+
+/*========================== RESPONSIVE CONTACT ==========================*/
+@include responsive(tablet) {
+    .contact .contact-container {
+        h1 {
+            text-align: center;
+        }
+
+        .contact-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+
+            .networks {
+                margin-top: 0;
+            }
+
+            .networks .ul-networks {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .contact-content .form {
+            width: 100%;
+            margin: 0 auto;
+
+            button {
+                width: 100%;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    width: 100%;
+                    box-shadow: 0 0 10px $c-primary;
+                }
+            }
+        }
+    }
+}
