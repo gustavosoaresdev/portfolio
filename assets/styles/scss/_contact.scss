@@ -1,0 +1,129 @@
+/*========================== START CONTACT ==========================*/
+.contact {
+    width: 100%;
+    background: $bg-primary;
+    padding: 40px 20px 100px 20px;
+    overflow-x: hidden;
+
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            font: {
+                size: $h1-font-size-for-title;
+                weight: $medium-font-weight;
+            }
+
+            color: $c-white;
+            margin-bottom: 40px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 48px;
+                height: 3px;
+                background: $c-primary;
+            }
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+
+            .networks {
+                margin-top: 80px;
+            }
+
+            .networks .ul-networks {
+                list-style: none;
+                border-radius: 2px;
+
+                li a {
+                    color: $c-white;
+                    display: block;
+                    padding: 15px 20px;
+                    text-align: center;
+                    border-radius: 2px;
+                    font-size: $medium-font-size-for-text;
+                    transition: all .3s ease-in-out;
+                    opacity: .8;
+
+
+                    &:hover {
+                        opacity: 1;
+                        background: $c-primary;
+                    }
+                }
+            }
+        }
+
+        .contact-content .form {
+            width: 500px;
+
+            .spacer-input {
+                margin-bottom: 1em;
+
+                label {
+                    display: block;
+                    margin-bottom: .125em;
+                    font-size: $medium-font-size-for-text;
+                    color: $c-weak-white;
+
+                    &::after {
+                        content: ' *';
+                        color: $c-primary;
+                    }
+                }
+
+                input,
+                textarea {
+                    background: lighten($bg-secundary, 2%);
+                    color: $c-weak-white;
+                    font-size: $normal-font-size-for-text;
+                    border: none;
+                    outline: none;
+                    border-radius: 2px;
+                    width: 100%;
+                    padding: .8em;
+                    border: 1px solid transparent;
+
+                    &:focus {
+                        border: 1px solid $c-primary;
+                    }
+                }
+
+                textarea {
+                    resize: vertical;
+                    height: 180px;
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 50px;
+                border-radius: 2px;
+                border: none;
+                outline: none;
+                color: $c-white;
+                background: $c-primary;
+                background: -moz-linear-gradient(to right, $c-primary, darken($c-primary, 20%));
+                background: -webkit-linear-gradient(to right, $c-primary, darken($c-primary, 20%));
+                background: linear-gradient(to right, $c-primary, darken($c-primary, 20%));
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+
+                font: {
+                    size: $medium-font-size-for-text;
+                    weight: $medium-font-weight;
+                }
+
+                &:hover {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
