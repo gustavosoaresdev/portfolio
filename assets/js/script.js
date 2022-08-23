@@ -100,7 +100,7 @@ function rollSmooth() {
     function scrollToSection(event) {
         event.preventDefault();
         const distanceFromTheTop = getDistanceFromTheTop(event.target) - 80;
-        //  menos 80 porque é o tamanho do header da página.
+        //  menos 80 porque é a altura do header da página.
         nativeScroll(distanceFromTheTop);
     }
 
