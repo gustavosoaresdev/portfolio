@@ -62,7 +62,7 @@ accordion();
 /*========================== ANIMATION WHEN SCROLLING ==========================*/
 function activateAnimationOnScroll() {
     const toUp = document.querySelectorAll('.js-scroll-toUp');
-    const halfOfTheWindow = window.innerHeight * 0.6;
+    const halfOfTheWindow = window.innerHeight * 0.75;
 
     if (toUp.length) {
         function animateScrolling() {
