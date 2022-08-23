@@ -80,3 +80,33 @@ function activateAnimationOnScroll() {
 };
 
 activateAnimationOnScroll();
+
+/*========================== ROLL SMOOTH ==========================*/
+function rollSmooth() {
+    const menuLinks = document.querySelectorAll('a[href^="#"]');
+
+    function getDistanceFromTheTop(element) {
+        const id = element.getAttribute('href');
+        return document.querySelector(id).offsetTop;
+    }
+
+    function nativeScroll(distanceFromTheTop) {
+        window.scroll({
+            top: distanceFromTheTop,
+            behavior: 'smooth',
+        })
+    }
+
+    function scrollToSection(event) {
+        event.preventDefault();
+        const distanceFromTheTop = getDistanceFromTheTop(event.target) - 80;
+        //  menos 80 porque é o tamanho do header da página.
+        nativeScroll(distanceFromTheTop);
+    }
+
+    menuLinks.forEach((links) => {
+        links.addEventListener('click', scrollToSection);
+    });
+}
+
+rollSmooth();
