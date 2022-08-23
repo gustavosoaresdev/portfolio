@@ -492,10 +492,14 @@ body {
 
 /*========================== RESPONSIVE FOOTER ==========================*/
 @include responsive(tablet) {
+    .footer {
+        height: 150px;
+    }
+
     .footer .footer-container {
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        gap: 30px;
 
         div {
             text-align: center;
