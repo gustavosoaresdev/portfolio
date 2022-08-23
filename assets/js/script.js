@@ -62,11 +62,20 @@ accordion();
 /*========================== ANIMATION WHEN SCROLLING ==========================*/
 function activateAnimationOnScroll() {
     const toUp = document.querySelectorAll('.js-scroll-toUp');
-    const halfOfTheWindow = window.innerHeight * 0.75;
+    const toRight = document.querySelectorAll('.js-scroll-toRight');
 
+    const halfOfTheWindow = window.innerHeight * 0.75;
     if (toUp.length) {
         function animateScrolling() {
             toUp.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
+
+                if (isSectionVisible)
+                    section.classList.add('active');
+            });
+
+            toRight.forEach((section) => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
 
