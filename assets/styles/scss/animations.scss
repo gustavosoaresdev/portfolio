@@ -81,3 +81,13 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
 }
+
+.js .js-scroll-opacity {
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+
+.js .js-scroll-opacity.active {
+    transition-delay: .2s;
+    opacity: 1;
+}

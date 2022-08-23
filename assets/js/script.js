@@ -64,6 +64,7 @@ function activateAnimationOnScroll() {
     const toUp = document.querySelectorAll('.js-scroll-toUp');
     const toRight = document.querySelectorAll('.js-scroll-toRight');
     const toLeft = document.querySelectorAll('.js-scroll-toLeft');
+    const opacity = document.querySelectorAll('.js-scroll-opacity');
 
     const halfOfTheWindow = window.innerHeight * 0.75;
     if (toUp.length) {
@@ -85,6 +86,14 @@ function activateAnimationOnScroll() {
             });
 
             toLeft.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
+
+                if (isSectionVisible)
+                    section.classList.add('active');
+            });
+
+            opacity.forEach((section) => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
 
