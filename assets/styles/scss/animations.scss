@@ -49,9 +49,18 @@
 
 
 /*========================== ANIMATION WHEN SCROLLING ==========================*/
-.js .js-scroll-toUp {
+
+/*========== ALL ==========*/
+.js .js-scroll-toUp,
+.js .js-scroll-toRight,
+.js .js-scroll-toLeft,
+.js .js-scroll-opacity {
     opacity: 0;
     transition: all .8s ease-in-out;
+}
+
+/*========== TO UP ==========*/
+.js .js-scroll-toUp {
     transform: translate3d(0, 5rem, 0) rotateY(-30deg);
 }
 
@@ -60,33 +69,27 @@
     opacity: 1;
 }
 
+/*========== TO RIGHT ==========*/
 .js .js-scroll-toRight {
-    opacity: 0;
-    transition: all .8s ease-in-out;
     transform: translate3d(-5rem, 0, 0);
 }
 
 .js .js-scroll-toRight.active {
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
+/*========== TO LEFT ==========*/
 .js .js-scroll-toLeft {
-    opacity: 0;
-    transition: all .8s ease-in-out;
     transform: translate3d(5rem, 0, 0);
 }
 
 .js .js-scroll-toLeft.active {
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
-.js .js-scroll-opacity {
-    opacity: 0;
-    transition: all .8s ease-in-out;
-}
-
+/*========== OPACITY ==========*/
 .js .js-scroll-opacity.active {
     transition-delay: .2s;
     opacity: 1;
