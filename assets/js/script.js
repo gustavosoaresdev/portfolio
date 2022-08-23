@@ -66,7 +66,6 @@ function activateAnimationOnScroll() {
 
     if (toUp.length) {
         function animateScrolling() {
-
             toUp.forEach((section) => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
@@ -76,7 +75,6 @@ function activateAnimationOnScroll() {
             });
         };
 
-        animateScrolling();
         window.addEventListener('scroll', animateScrolling);
     }
 };
