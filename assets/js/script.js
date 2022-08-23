@@ -58,3 +58,27 @@ function accordion() {
 }
 
 accordion();
+
+/*========================== ANIMATION WHEN SCROLLING ==========================*/
+function activateAnimationOnScroll() {
+    const toUp = document.querySelectorAll('.js-scroll-toUp');
+    const halfOfTheWindow = window.innerHeight * 0.6;
+
+    if (toUp.length) {
+        function animateScrolling() {
+
+            toUp.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
+
+                if (isSectionVisible)
+                    section.classList.add('active');
+            });
+        };
+
+        animateScrolling();
+        window.addEventListener('scroll', animateScrolling);
+    }
+};
+
+activateAnimationOnScroll();
