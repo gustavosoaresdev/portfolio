@@ -63,6 +63,7 @@ accordion();
 function activateAnimationOnScroll() {
     const toUp = document.querySelectorAll('.js-scroll-toUp');
     const toRight = document.querySelectorAll('.js-scroll-toRight');
+    const toLeft = document.querySelectorAll('.js-scroll-toLeft');
 
     const halfOfTheWindow = window.innerHeight * 0.75;
     if (toUp.length) {
@@ -76,6 +77,14 @@ function activateAnimationOnScroll() {
             });
 
             toRight.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
+
+                if (isSectionVisible)
+                    section.classList.add('active');
+            });
+
+            toLeft.forEach((section) => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isSectionVisible = (sectionTop - halfOfTheWindow) < 0;
 
