@@ -148,3 +148,16 @@ function rollSmooth() {
 }
 
 rollSmooth();
+
+/* Essa função é ativada apenas para dispositivos com a tela menor que 768px */
+function removeClassAndAddAnother() {
+    const networks = document.querySelector('.networks');
+    const maxWidth = window.matchMedia('(max-width: 768px)');
+
+    if (maxWidth.matches) {
+        networks.classList.remove('js-scroll-toLeft');
+        networks.classList.add('js-scroll-toUp');
+    }
+}
+
+removeClassAndAddAnother();
