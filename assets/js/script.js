@@ -102,6 +102,7 @@ function activateAnimationOnScroll() {
             });
         };
 
+        animateScrolling();
         window.addEventListener('scroll', animateScrolling);
     }
 };
