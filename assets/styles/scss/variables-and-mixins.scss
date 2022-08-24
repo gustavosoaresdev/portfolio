@@ -64,4 +64,16 @@ $bold-font-weight: bold;
             @content;
         }
     }
+
+    @else if $device ==mobile-thanks {
+        @media screen and (max-width: 532px) {
+            @content;
+        }
+    }
+
+    @else if $device ==mobile-thanks-height {
+        @media screen and (max-height: 430px) {
+            @content;
+        }
+    }
 }
