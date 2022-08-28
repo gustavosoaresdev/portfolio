@@ -68,7 +68,7 @@ function activateAnimationOnScroll() {
 
     const maxWidth = window.matchMedia('(max-width: 768px)');
     const halfOfTheWindow = maxWidth.matches
-        ? window.innerHeight * 0.8
+        ? window.innerHeight * 0.85
         : window.innerHeight * 0.7;
 
     if (toUp.length) {
