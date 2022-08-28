@@ -66,7 +66,11 @@ function activateAnimationOnScroll() {
     const toLeft = document.querySelectorAll('.js-scroll-toLeft');
     const opacity = document.querySelectorAll('.js-scroll-opacity');
 
-    const halfOfTheWindow = window.innerHeight * 0.75;
+    const maxWidth = window.matchMedia('(max-width: 768px)');
+    const halfOfTheWindow = maxWidth.matches
+        ? window.innerHeight * 0.8
+        : window.innerHeight * 0.7;
+
     if (toUp.length) {
         function animateScrolling() {
             toUp.forEach((section) => {

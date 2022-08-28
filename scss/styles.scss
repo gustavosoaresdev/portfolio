@@ -203,22 +203,25 @@ body {
 
         .menu-navigation #btn-menu-mobile {
             display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
+            width: 45px;
+            height: 45px;
             border: 0;
-            border-radius: 2px;
-            padding: 6px;
+            border-radius: 50%;
             background: $c-primary;
 
             #menu-hamburguer {
                 color: $c-white;
                 border-top: 3px solid;
-                width: 28px;
+                width: 25px;
 
                 &::before,
                 &::after {
                     content: '';
                     display: block;
-                    width: 28px;
+                    width: 25px;
                     height: 3px;
                     background: currentColor;
                     margin-top: 6px;
@@ -325,7 +328,7 @@ body {
 
                     &::after {
                         content: '\1F44B';
-                        font-size: 1em;
+                        font-size: .92em;
                     }
                 }
 
