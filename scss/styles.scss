@@ -108,6 +108,7 @@ body {
 
             a {
                 font-size: $medium-font-size-for-text;
+                font-weight: $medium-font-weight;
                 color: $c-white;
                 opacity: .8;
                 transition: all .3s ease-in-out;
@@ -116,11 +117,14 @@ body {
                 &::after {
                     content: '';
                     width: 0%;
-                    height: 2px;
+                    height: 3px;
                     background: $c-primary;
+                    background: -webkit-linear-gradient(to right, darken($c-primary, 30%), $c-primary);
+                    background: -moz-linear-gradient(to right, darken($c-primary, 30%), $c-primary);
+                    background: linear-gradient(to right, darken($c-primary, 30%), $c-primary);
                     position: absolute;
                     left: 0;
-                    bottom: 0;
+                    bottom: -3px;
                     transition: all .3s ease-in-out;
                 }
 
@@ -206,10 +210,10 @@ body {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border: 0;
-            border-radius: 50%;
+            border-radius: 3px;
             background: $c-primary;
 
             #menu-hamburguer {
@@ -349,7 +353,7 @@ body {
                     max-width: 380px;
                     color: $c-weak-white;
                     font-size: $medium-font-size-for-text;
-                    font-weight: $smaller-font-weight;
+                    font-weight: $normal-font-weight;
                     opacity: 0;
                     animation: moveBanner 1s .6s forwards;
                 }

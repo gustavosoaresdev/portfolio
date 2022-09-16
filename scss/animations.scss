@@ -43,7 +43,19 @@
 
     to {
         opacity: 1;
-        max-height: 500px;
+        max-height: 1200px;
+    }
+}
+
+@keyframes toUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
     }
 }
 

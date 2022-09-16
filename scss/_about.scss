@@ -85,10 +85,11 @@
 
                 dd {
                     font-size: $medium-font-size-for-text;
-                    font-weight: $smaller-font-weight;
+                    font-weight: $normal-font-weight;
                     margin-left: 1.1em;
+                    opacity: .7 !important;
                     display: none;
-                    animation: slideDown 1s forwards;
+                    animation: slideDown 2.5s forwards;
 
                     &.active {
                         display: block;
@@ -111,6 +112,7 @@
                 border: 1px solid $c-primary;
                 border-radius: 50%;
                 padding: 8px;
+                animation: toUp 2.5s ease-in-out infinite alternate;
             }
         }
     }
@@ -138,6 +140,10 @@
 
             .img {
                 margin-bottom: 40px;
+
+                img {
+                    animation: none;
+                }
             }
         }
     }
