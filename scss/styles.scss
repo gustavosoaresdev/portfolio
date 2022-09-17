@@ -28,6 +28,10 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: $c-white;
     font-size: $normal-font-size-for-text;

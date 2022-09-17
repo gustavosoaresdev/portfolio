@@ -88,8 +88,11 @@
                     font-weight: $normal-font-weight;
                     margin-left: 1.1em;
                     opacity: .7 !important;
-                    display: none;
-                    animation: slideDown 2.5s forwards;
+                    animation: showDD .3s forwards;
+
+                    .js & {
+                        display: none;
+                    }
 
                     &.active {
                         display: block;
