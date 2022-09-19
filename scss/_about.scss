@@ -84,11 +84,11 @@
                 }
 
                 dd {
+                    color: $c-weak-white;
                     font-size: $medium-font-size-for-text;
                     font-weight: $normal-font-weight;
                     margin-left: 1.1em;
-                    opacity: .7 !important;
-                    animation: showDD .3s forwards;
+                    animation: showDD .5s forwards;
 
                     .js & {
                         display: none;
