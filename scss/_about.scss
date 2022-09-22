@@ -44,73 +44,88 @@
         }
 
         .about-content {
-            max-width: 740px;
+            max-width: 840px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             flex-direction: row-reverse;
 
-            .dl-about {
-                width: 420px;
+            .spacer {
+                margin-left: 60px;
 
-                .text {
+                p:first-child {
+                    font-size: 2em;
+                    border-bottom: 1px solid $c-primary;
+                    padding-bottom: 20px;
+                }
+
+                p {
                     color: $c-weak-white;
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
+                    text-align: left;
+                    max-width: 100%;
 
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-
-                dt {
-                    margin-top: -10px;
-                    margin-bottom: 5px;
-
-                    font: {
-                        size: $big-font-size-for-text;
-                        weight: $medium-font-weight;
-                    }
-
-                    i {
-                        font-size: $normal-font-size-for-text;
-                        margin-right: .5em;
-                        cursor: pointer;
-                        transition: all .3s ease-in-out;
-                    }
-
-                    &.active i {
-                        transform: rotateZ(90deg);
-                    }
-                }
-
-                dd {
-                    font-size: $medium-font-size-for-text;
-                    font-weight: $normal-font-weight;
-                    margin-left: 1.1em;
-                    animation: showDD .5s forwards;
-
-                    .js & {
+                    &::before,
+                    &::after {
                         display: none;
-                    }
-
-                    &.active {
-                        display: block;
-                    }
-
-                    a {
-                        font-weight: $medium-font-weight;
-                        color: $c-primary;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
                     }
                 }
             }
 
+
+            // .dl-about {
+            //     width: 420px;
+
+
+            //     // dt {
+            //     //     margin-top: -10px;
+            //     //     margin-bottom: 5px;
+
+            //     //     font: {
+            //     //         size: $big-font-size-for-text;
+            //     //         weight: $medium-font-weight;
+            //     //     }
+
+            //     //     i {
+            //     //         font-size: $normal-font-size-for-text;
+            //     //         margin-right: .5em;
+            //     //         cursor: pointer;
+            //     //         transition: all .3s ease-in-out;
+            //     //     }
+
+            //     //     &.active i {
+            //     //         transform: rotateZ(90deg);
+            //     //     }
+            //     // }
+
+            //     dd {
+            //         font-size: $medium-font-size-for-text;
+            //         font-weight: $normal-font-weight;
+            //         margin-left: 1.1em;
+            //         animation: showDD .5s forwards;
+
+            //         .js & {
+            //             display: none;
+            //         }
+
+            //         &.active {
+            //             display: block;
+            //         }
+
+            //         a {
+            //             font-weight: $medium-font-weight;
+            //             color: $c-primary;
+
+            //             &:hover {
+            //                 text-decoration: underline;
+            //             }
+            //         }
+            //     }
+            // }
+
             .img img {
-                width: 200px;
-                height: 200px;
+                width: 240px;
+                height: 240px;
                 border: 1px solid $c-primary;
                 border-radius: 50%;
                 padding: 8px;
