@@ -36,7 +36,7 @@ $bold-font-weight: bold;
 /*========================== MIXINS ==========================*/
 @mixin responsive($device) {
     @if $device ==tablet {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 825px) {
             @content;
         }
     }

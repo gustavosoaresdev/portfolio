@@ -66,7 +66,7 @@ function activateAnimationOnScroll() {
     const toLeft = document.querySelectorAll('.js-scroll-toLeft');
     const opacity = document.querySelectorAll('.js-scroll-opacity');
 
-    const maxWidth = window.matchMedia('(max-width: 768px)');
+    const maxWidth = window.matchMedia('(max-width: 825px)');
     const halfOfTheWindow = maxWidth.matches
         ? window.innerHeight * 0.85
         : window.innerHeight * 0.75;

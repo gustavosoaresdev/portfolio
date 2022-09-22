@@ -40,14 +40,13 @@
 
             .text {
                 margin-left: 70px;
-                max-width: 50%;
+                width: 50%;
 
                 p {
                     color: $c-weak-white;
                     font-size: $medium-font-size-for-text;
                     margin-bottom: 20px;
-                    text-align: left;
-                    max-width: 62%;
+                    max-width: 580px;
 
                     &:nth-child(2)::after {
                         content: '\2714';
@@ -107,20 +106,12 @@
         flex-direction: column-reverse;
         align-items: center;
 
-        .dl-about {
-            max-width: 100%;
-            text-align: center;
-
-            dd {
-                margin-left: 0;
-            }
-        }
-
         .img {
             margin-bottom: 40px;
 
-            img {
-                animation: none;
+            .center {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
