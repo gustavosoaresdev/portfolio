@@ -43,13 +43,13 @@
                 text-align: center;
                 line-height: 200px;
                 background: lighten($bg-secundary, 2%);
-                border-radius: 2px;
-                border: 1px solid transparent;
+                border-radius: 8px;
+                border: 2px solid $c-primary;
                 transition: all .5s ease-in-out;
 
                 &:hover {
-                    border: 1px solid $c-primary;
                     transform: scale(1.1);
+                    box-shadow: 0 0 12px $c-primary;
                 }
 
                 &:hover p {

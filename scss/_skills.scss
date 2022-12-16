@@ -52,14 +52,14 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                border: 1px solid transparent;
-                border-radius: 2px;
+                border: 2px solid $c-primary;
+                border-radius: 8px;
                 transition: all .5s ease-in-out;
                 position: relative;
 
                 &:hover {
                     transform: scale(1.1);
-                    border: 1px solid $c-primary;
+                    box-shadow: 0 0 12px $c-primary;
                 }
 
                 i {
@@ -82,7 +82,7 @@
                     height: 30px;
                     text-align: center;
                     line-height: 30px;
-                    border-radius: 2px;
+                    border-radius: 4px;
                 }
 
                 &::after {
@@ -100,7 +100,7 @@
             .css,
             .js {
                 &:hover::before {
-                    top: -40px;
+                    top: -45px;
                 }
             }
 
@@ -108,7 +108,7 @@
             .linux,
             .git {
                 &:hover::before {
-                    bottom: -40px;
+                    bottom: -45px;
                 }
             }
 

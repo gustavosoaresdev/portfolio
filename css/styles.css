@@ -207,7 +207,7 @@
 .about .about-container .about-content .img img {
   width: 200px;
   height: 200px;
-  border: 1px solid #4829a6;
+  border: 2px solid #4829a6;
   border-radius: 50%;
   padding: 8px;
   animation: toUp 2.5s ease-in-out infinite alternate;
@@ -296,14 +296,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid transparent;
-  border-radius: 2px;
+  border: 2px solid #4829a6;
+  border-radius: 8px;
   transition: all 0.5s ease-in-out;
   position: relative;
 }
 .skills .skills-container .skills-content .cards-container .card:hover {
   transform: scale(1.1);
-  border: 1px solid #4829a6;
+  box-shadow: 0 0 12px #4829a6;
 }
 .skills .skills-container .skills-content .cards-container .card i {
   font-size: 70px;
@@ -322,7 +322,7 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .skills .skills-container .skills-content .cards-container .html::after,
 .skills .skills-container .skills-content .cards-container .css::after,
@@ -341,12 +341,12 @@
 .skills .skills-container .skills-content .cards-container .html:hover::before,
 .skills .skills-container .skills-content .cards-container .css:hover::before,
 .skills .skills-container .skills-content .cards-container .js:hover::before {
-  top: -40px;
+  top: -45px;
 }
 .skills .skills-container .skills-content .cards-container .sass:hover::before,
 .skills .skills-container .skills-content .cards-container .linux:hover::before,
 .skills .skills-container .skills-content .cards-container .git:hover::before {
-  bottom: -40px;
+  bottom: -45px;
 }
 .skills .skills-container .skills-content .cards-container .html:hover::before {
   content: "HTML";
@@ -456,13 +456,13 @@
   text-align: center;
   line-height: 200px;
   background: #0e0d1e;
-  border-radius: 2px;
-  border: 1px solid transparent;
+  border-radius: 8px;
+  border: 2px solid #4829a6;
   transition: all 0.5s ease-in-out;
 }
 .projects .projects-container .cards-container .card:hover {
-  border: 1px solid #4829a6;
   transform: scale(1.1);
+  box-shadow: 0 0 12px #4829a6;
 }
 .projects .projects-container .cards-container .card:hover p {
   opacity: 1;
