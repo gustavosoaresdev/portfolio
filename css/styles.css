@@ -303,7 +303,6 @@
 }
 .skills .skills-container .skills-content .cards-container .card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 12px #4829a6;
 }
 .skills .skills-container .skills-content .cards-container .card i {
   font-size: 70px;
@@ -322,7 +321,7 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .skills .skills-container .skills-content .cards-container .html::after,
 .skills .skills-container .skills-content .cards-container .css::after,
@@ -337,6 +336,8 @@
   width: 100%;
   text-align: center;
   padding: 2px 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .skills .skills-container .skills-content .cards-container .html:hover::before,
 .skills .skills-container .skills-content .cards-container .css:hover::before,
@@ -350,11 +351,13 @@
 }
 .skills .skills-container .skills-content .cards-container .html:hover::before {
   content: "HTML";
+  box-shadow: 0 2px 0 #FF5733;
 }
 .skills .skills-container .skills-content .cards-container .html::after {
   content: "HTML";
 }
 .skills .skills-container .skills-content .cards-container .css:hover::before {
+  box-shadow: 0 2px 0 dodgerblue;
   content: "CSS";
 }
 .skills .skills-container .skills-content .cards-container .css::after {
@@ -362,24 +365,28 @@
 }
 .skills .skills-container .skills-content .cards-container .js:hover::before {
   content: "JavaScript";
+  box-shadow: 0 2px 0 yellow;
 }
 .skills .skills-container .skills-content .cards-container .js::after {
   content: "JavaScript";
 }
 .skills .skills-container .skills-content .cards-container .sass:hover::before {
   content: "Sass";
+  box-shadow: 0 -2px 0 rgb(172, 0, 172);
 }
 .skills .skills-container .skills-content .cards-container .sass::after {
   content: "Sass";
 }
 .skills .skills-container .skills-content .cards-container .linux:hover::before {
   content: "Linux";
+  box-shadow: 0 -2px 0 #6d57b0;
 }
 .skills .skills-container .skills-content .cards-container .linux::after {
   content: "Linux";
 }
 .skills .skills-container .skills-content .cards-container .git:hover::before {
   content: "Git";
+  box-shadow: 0 -2px 0 #FF5733;
 }
 .skills .skills-container .skills-content .cards-container .git::after {
   content: "Git";
@@ -560,7 +567,7 @@
 }
 .contact .contact-container .contact-content .form .spacer-input textarea {
   resize: vertical;
-  height: 180px;
+  height: 225px;
 }
 .contact .contact-container .contact-content .form button {
   width: 150px;

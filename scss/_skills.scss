@@ -59,7 +59,7 @@
 
                 &:hover {
                     transform: scale(1.1);
-                    box-shadow: 0 0 12px $c-primary;
+                    // box-shadow: 0 0 12px $c-primary;
                 }
 
                 i {
@@ -82,7 +82,7 @@
                     height: 30px;
                     text-align: center;
                     line-height: 30px;
-                    border-radius: 4px;
+                    border-radius: 8px;
                 }
 
                 &::after {
@@ -93,6 +93,8 @@
                     width: 100%;
                     text-align: center;
                     padding: 2px 0;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
                 }
             }
 
@@ -100,6 +102,7 @@
             .css,
             .js {
                 &:hover::before {
+                    // box-shadow: 0 2px 0 $c-primary;
                     top: -45px;
                 }
             }
@@ -108,6 +111,7 @@
             .linux,
             .git {
                 &:hover::before {
+                    // box-shadow: 0 -2px 0 $c-primary;
                     bottom: -45px;
                 }
             }
@@ -115,6 +119,7 @@
             .html {
                 &:hover::before {
                     content: 'HTML';
+                    box-shadow: 0 2px 0 #FF5733;
                 }
 
                 &::after {
@@ -124,6 +129,7 @@
 
             .css {
                 &:hover::before {
+                    box-shadow: 0 2px 0 dodgerblue;
                     content: 'CSS';
                 }
 
@@ -135,6 +141,7 @@
             .js {
                 &:hover::before {
                     content: 'JavaScript';
+                    box-shadow: 0 2px 0 yellow;
                 }
 
                 &::after {
@@ -145,6 +152,7 @@
             .sass {
                 &:hover::before {
                     content: 'Sass';
+                    box-shadow: 0 -2px 0 rgb(172, 0, 172);
                 }
 
                 &::after {
@@ -154,7 +162,8 @@
 
             .linux {
                 &:hover::before {
-                    content: 'Linux'
+                    content: 'Linux';
+                    box-shadow: 0 -2px 0 $c-secundary;
                 }
 
                 &::after {
@@ -165,6 +174,7 @@
             .git {
                 &:hover::before {
                     content: 'Git';
+                    box-shadow: 0 -2px 0 #FF5733;
                 }
 
                 &::after {
