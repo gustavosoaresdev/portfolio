@@ -319,6 +319,9 @@ body {
                     color: $c-white;
                     animation: moveBanner 1s .2s forwards;
                     opacity: 0;
+                    line-height: 1.125;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
 
                     font: {
                         size: $big-font-size-for-title;
@@ -326,8 +329,10 @@ body {
                     }
 
                     &::after {
-                        content: '\1F44B';
+                        content: ':)';
+                        color: $c-primary;
                         font-size: .92em;
+                        font-family: sans-serif;
                     }
                 }
 
@@ -439,10 +444,6 @@ body {
 @include responsive(mobile-3) {
     .main .main-container .sec-content .content {
         max-width: 220px;
-
-        h1::after {
-            display: none;
-        }
     }
 }
 
